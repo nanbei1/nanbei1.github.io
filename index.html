@@ -34,8 +34,8 @@
       height: 100%;
     }
     .name{
-        width: 100px;
-        height: 100px;
+        width: 260px;
+        height: 110px;
         color: pink;
         /*float: right;
         /*margin-right: 700px;
@@ -47,9 +47,13 @@
        
     }
     audio{
-     /*display: none;*/
+     display: none;
     }
-    
+    .df{
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
   </style>
   <body>
     <!-- 樱花 -->
@@ -64,12 +68,22 @@
 
     <!--姓名-->
     <div class="name"> 
-        <h1>贾宇婷</h1>
+        <h1>邓忠郎❤凡彬彬</h1>
     </div>
+    <div class="df">
+      <button onclick="bf()">开始播放音乐</button>
+    </div>
+    
+    <audio src="../html/Moonlight - lil MILK(1).mp3" id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
 
-    <audio src="./Moonlight - lil MILK(1).mp3" id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
 
-
+    <script>
+      
+      function bf(){
+        const audio = document.querySelector('audio');
+        audio.play();
+      }
+    </script>
   </body>
 </html>
 <script type="text/javascript">
@@ -84,16 +98,6 @@
       music.play(); 
     }    
   }
-  document.addEventListener('WeixinJSBridgeReady', function() {
-
-   document.getElementById('audios').play()
-
-}) 
-document.addEventListener('touchstart', function() {
-
-document.getElementById('audios').play()
-
-})
   </script>
 <script>
     /*
